@@ -1,19 +1,21 @@
 import requests
 import json
 
-# Your OpenRouter API key
-api_key = "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"
+# Your OpenRouter API key should be pasted here.
+api_key = ""
 
-# OpenRouter API endpoint
+# OpenRouter API endpoint this can be changed according to which model you want.
 api_url = "https://openrouter.ai/api/v1/chat/completions"
 
-# Headers
+# Headers--> strictly needed
 headers = {
     "Authorization": f"Bearer {api_key}",
     "Content-Type": "application/json"
 }
 
-# Request payload
+# you can change the messages content for output. 
+
+# Request payload--> you can manipulate the payload["messages"][0]["content"] here
 payload = {
     "model": "mistralai/mistral-7b-instruct",
     "messages": [{"role": "user", "content": "what is capital of India"}]
